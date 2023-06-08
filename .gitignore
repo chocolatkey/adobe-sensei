@@ -1,0 +1,10 @@
+examples/
+original/
+config.json
+*.png
+*.jpeg
+*.jpg
+spl_response.json
+contentAnalyzerResponse.json
+generated-image-*
+generated-mask-*
