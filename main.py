@@ -269,7 +269,11 @@ r = encode_and_post(
     },
 )
 r.raise_for_status()
-multipart_data = decoder.MultipartDecoder.from_response(r)
+try:
+    multipart_data = decoder.MultipartDecoder.from_response(r)
+except Exception as e:
+    print(r.text)
+    raise e
 for part in multipart_data.parts:
     is_json = False
 
