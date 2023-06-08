@@ -8,6 +8,9 @@ from requests_toolbelt.multipart import decoder, encoder
 with open("config.json", "r") as f:
     config = json.load(f)
 
+assert config["device_token"]
+assert config["device_id"]
+
 # 2023-06-07T20:12:34.567-0100
 nt = datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S.%f%z")
 
