@@ -17,7 +17,7 @@ nt = datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S.%f%z")
 client = httpx.Client(
     headers={
         # TODO windows version randomized?
-        "User-Agent": f"NGL Client/1.33.0.11 (WINDOWS_64/10.0.19045.1) [{nt[:22] + nt[25:]}]",
+        "User-Agent": f"NGL Client/1.34.0.4 (WINDOWS_64/10.0.19045.1) [{nt[:22] + nt[25:]}]",
         "X-IMS-ClientId": "ps_gentech_diffusion_desktop",
     },
     timeout=60,  # Don't want to timeout while Adobe is doing AI thingies
